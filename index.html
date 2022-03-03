@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<meta charset="UTF-8">
+	<title>Filter Facebook Friends</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="//code.jquery.com/jquery.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+	<script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap.min.js"></script>
+	<script href="js/kha.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<center><h2 style="color: rgb(46, 46, 46);">Filter Facebook Friends By Axeyed Tran</h2></center>
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h3 class="panel-title">Filter The List Of Non-Interactive Friends</h3>
+				</div>
+				<div class="panel-body">
+					<div class="col-md-12">
+						<div class="form-group">
+							<input type="text" name="" id="accessToken" class="form-control" value="" required="required" placeholder="Access Token Facebook">
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label>Choose Gender</label>
+							<select name="" id="gender" class="form-control" required="required" title="Giới Tính Bạn Bè Muốn Lọc">
+								<option value="all">All</option>
+								<option value="male">Male</option>
+								<option value="female">Female</option>
+								<option value="500fr">Friends Below 500</option>
+								<option value="k">Friends Are Foreigners</option>
+							</select>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label>Choose The Number Of Posts</label>
+							<select name="" id="total_post" class="form-control" required="required" title="Lượng Post Muốn Quét">
+								<option value="10">10</option>
+								<option value="20">20</option>
+								<option value="50">50</option>
+								<option value="50">100</option>
+								<option value="200">200</option>
+								<option value="10000">10000</option>
+							</select>
+						</div>
+					</div>
+					<div class="col-md-12">
+						<div class="form-group button-action">
+							<button type="button" class="btn btn-success" onclick="getListFriend();">Conduct Filter</button>
+							<button type="button" class="btn btn-danger" onclick="Del_0_Point();">Delete Friend With Interaction Score of 0</button>
+							<button type="button" class="btn btn-danger" onclick="Del_Selected();">Delete You Selected</button>
+						</div>
+					</div>
+					<div class="col-md-12">
+						<div class="alert alert-info" id="result-msg" style="display: none;">
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-primary" style="display: none;" id="ds-friends">
+				<div class="panel-heading">
+					<h3 class="panel-title">Ranking List</h3>
+				</div>
+				<div class="panel-body">
+					<div class="table-responsive">
+						<table class="table table-bordered" width="100%" id="table-friends">
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script href="js/kha.js"></script>
+</body>
+</html>

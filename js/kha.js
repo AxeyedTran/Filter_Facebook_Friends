@@ -10,7 +10,7 @@ function getListFriend() {
 	    alert("Please Enter the Access Token Full Rights!");
 		return false;
 	}
-	$("#result-msg").html('<img src="https://www.drupal.org/files/issues/throbber_13.gif" width="30" height="30" /> Đang Lấy Thông Tin. Vui Lòng Đợi...').fadeIn("slow");
+	$("#result-msg").html('<img src="https://www.drupal.org/files/issues/throbber_13.gif" width="30" height="30" /> Get information. Please wait ...').fadeIn("slow");
 	var gender = $("#gender").val();
 	if (gender == 'male') {
 		var a = 'AND sex != \'female\'';
